@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "cripsy-forms-halfmoon"
+version = "0.1.0"
+description = "crispy templates for halfmoon"
+authors = ["Ben Buscarino <foss@busc.dev>"]
+packages = [
+    { include="crispy_forms_halfmoon", from="." },
+]
+[tool.poetry.dependencies]
+python = "^3.7"
+django = "^3.1.2"
+django-crispy-forms = "^1.9.2"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+
+[tool.black]
+target-version = ['py37']
+exclude = '''
+(
+   /(
+      \.venv
+    | __pycache__
+    | venv
+   )/
+)
+'''
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
