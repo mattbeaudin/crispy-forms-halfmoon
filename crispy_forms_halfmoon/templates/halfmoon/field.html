@@ -3,9 +3,9 @@
 {% if field.is_hidden %}
     {{ field }}
 {% else %}
-    <{% if tag %}{{ tag }}{% else %}div{% endif %} id="div_{{ field.auto_id }}" class="{% if not field|is_checkbox %}{% if field.field.required %}required{% endif %}{% if 'form-horizontal' in form_class %} inline{% endif %} field{% endif %}{% if wrapper_class %} {{ wrapper_class }}{% endif %}{% if field.css_classes %} {{ field.css_classes }}{% endif %}">
+    <{% if tag %}{{ tag }}{% else %}div{% endif %} id="div_{{ field.auto_id }}" class="{% if not field|is_checkbox %}{% if 'form-horizontal' in form_class %} inline{% endif %} field{% endif %}{% if wrapper_class %} {{ wrapper_class }}{% endif %}{% if field.css_classes %} {{ field.css_classes }}{% endif %}">
         {% if field.label and not field|is_checkbox and form_show_labels %}
-            <label for="{{ field.id_for_label }}" {% if label_class %}class="{{ label_class }}"{% endif %}>
+            <label for="{{ field.id_for_label }}" {% if label_class %}class="{{ label_class }}{% if field.field.required %}required{% endif %}"{% endif %}>
                 {{ field.label|safe }}
             </label>
         {% endif %}
