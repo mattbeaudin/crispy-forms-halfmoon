@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "crispy-forms-halfmoon"
-version = "0.1.2"
+version = "0.1.4"
 description = "crispy templates for halfmoon"
 authors = ["Ben Buscarino <foss@busc.dev>"]
 packages = [
