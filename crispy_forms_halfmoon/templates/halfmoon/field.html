@@ -12,6 +12,7 @@
 
         {% if field|is_select %}
             {% include 'halfmoon/layout/select.html' %}
+            {% include 'halfmoon/layout/help_text_and_errors.html' %}
         {% endif %}
 
         {% if field|is_checkboxselectmultiple %}
@@ -20,6 +21,7 @@
 
         {% if field|is_radioselect %}
             {% include 'halfmoon/layout/radioselect.html' %}
+            {% include 'halfmoon/layout/help_text_and_errors.html' %}
         {% endif %}
 
         {% if not field|is_select and not field|is_checkboxselectmultiple and not field|is_radioselect %}
